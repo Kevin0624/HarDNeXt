@@ -1,19 +1,10 @@
 
 # HarDNeXt-Pytorch
 
-[HarDNeXt: A Stage Receptive Field and Connectivity Aware Convolution Neural Network](https://etd.lib.nctu.edu.tw/cgi-bin/gs32/hugsweb.cgi?o=dnthucdr&s=id=%22G021080626010%22.&searchmode=basic)
+**[HarDNeXt: A Stage Receptive Field and Connectivity Aware Convolution Neural Network](https://etd.lib.nctu.edu.tw/cgi-bin/gs32/hugsweb.cgi?o=dnthucdr&s=id=%22G021080626010%22.&searchmode=basic)**
 
-<!-- ## Developing Log
-<details><summary> <b>Expand</b> </summary>
+**HarDNeXt-MSEG for Medical Image Segmentation in 0.913 mDice / 127 FPS, 0.910 mDice / 150 FPS on Kvasir-SEG dataset**
 
-
-* `2020-10-15` - Add [HarDNet_residual](https://), [HarDNet_refine1](https://), [HarDNet_no_bot](https://) performance result
-* `2020-10-08` - Add speed testing code
-* `2020-10-07` - Add  [ShuffleNetV2](https://arxiv.org/abs/1807.11164), [ResNet50, 101](https://arxiv.org/abs/1512.03385)
-* `2020-10-06` - Add [HarDNet_residual](https://), [HarDNet_refine1](https://), [HarDNet_no_bot](https://)
-* `2020-10-05` - Add [torchstat](https://github.com/Swall0w/torchstat) function
-* `2020-09-26` - mirror folk from [Pytorch_HarDNet](https://github.com/PingoLH/Pytorch-HarDNet)
-</details> -->
 
 ### Image Classification (ImgaeNet 2012)
 ![](https://i.imgur.com/gjAEC5v.jpg)
@@ -43,19 +34,19 @@
 |   ResNet-101    |   7.84   |         141         |  1.207   |       77.3       |
 |  DenseNet-201   |   4.37   |         58          |   1.92   |       77.2       |
 |   ResNeXt-50    |   4.27   |         166         |   0.92   |      77.62       |
-| **HarDNeXt-56** | **6.32** |       **182**       | **0.89** |     **77.3*
+| **HarDNeXt-56** | **6.32** |       **182**       | **0.89** |     **77.3**     |
+
+---
 
 ### Training
 ```
 python ./src/main.py --model_name hardnext --arch 39 /imagenet/data/path
 ```
-### Model Summary
+
+---
+
+### Evaluation
 
 ```
-python ./src/main.py --model_name hardnext --arch 39  --h 224 --w 224
-```
-### Model GPU Speed Test
-
-```
-python ./src/model_speed_test.py --model_name hardnext --arch 39  --h 224 --w 224 --gpu 0
+python ./src/main.py --model_name hardnext --arch 39  --evaluation --resume /pretrained weight/data/path
 ```
