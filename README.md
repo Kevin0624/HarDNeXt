@@ -9,6 +9,13 @@
 ### Image Classification (ImgaeNet 2012)
 ![](https://i.imgur.com/gjAEC5v.jpg)
 
+
+---
+
+### Medical Image Segmentation (Kvasir-SEG)
+![](https://i.imgur.com/Mh7MSo8.png)
+
+
 ---
 
 #### Performance on ImageNet2012 Validation Set 
