@@ -39,7 +39,7 @@ class ConvLayer_no_activation(nn.Sequential): # conv + batchnorm + relu6
     def forward(self, x):
         return super().forward(x)
 
-class HarDBlock_3_layer(nn.Module):
+class HarDX_3_layer(nn.Module):
     def __init__(self, in_ch, kernel=3, bias=False, k=32, m_1=4, downsample = 0):
         super().__init__()
 
@@ -67,7 +67,7 @@ class HarDBlock_3_layer(nn.Module):
 
         return final_out
 
-class HarDBlock_6_layer(nn.Module):
+class HarDX_6_layer(nn.Module):
     def __init__(self, in_ch, kernel=3, bias=False, k=32, m_1=4, m_2=6, downsample=False):
         super().__init__()
 
@@ -98,7 +98,7 @@ class HarDBlock_6_layer(nn.Module):
 
         return final_out
 
-class HarDBlock_12_layer(nn.Module):
+class HarDX_12_layer(nn.Module):
     def __init__(self, in_ch, kernel=3, bias=False, k=32, m_1=2, m_2=4, m_3=6, downsample=False):
         super().__init__()
 
@@ -239,13 +239,13 @@ class HarDNeXt(nn.Module):
         for i in range(blks):
 
             if n_layers[i] == 3:
-                blk = HarDBlock_3_layer(in_ch=ch, kernel=kernel[i], bias=False, k=gr[i], m_1=m1[i])
+                blk = HarDX_3_layer(in_ch=ch, kernel=kernel[i], bias=False, k=gr[i], m_1=m1[i])
             
             elif n_layers[i] == 6:
-                blk = HarDBlock_6_layer(in_ch=ch, kernel=kernel[i], bias=False, k=gr[i], m_1=m1[i], m_2=m2[i])
+                blk = HarDX_6_layer(in_ch=ch, kernel=kernel[i], bias=False, k=gr[i], m_1=m1[i], m_2=m2[i])
             
             elif n_layers[i] == 12:
-                blk = HarDBlock_12_layer(in_ch=ch, kernel=kernel[i], bias=False, k=gr[i], m_1=m1[i], m_2=m2[i], m_3=m3[i])
+                blk = HarDX_12_layer(in_ch=ch, kernel=kernel[i], bias=False, k=gr[i], m_1=m1[i], m_2=m2[i], m_3=m3[i])
             
             ch = blk.blk_out
             self.base.append(blk)
