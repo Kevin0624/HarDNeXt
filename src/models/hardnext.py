@@ -186,7 +186,7 @@ class HarDNeXt(nn.Module):
         
         
         elif arch == 39:
-            ''' 75.37 %'''
+            
             first_ch  = [24, 48]
             ch_list =  [  64, 168,  192,  448,  560,     1024]
             gr       = [  16,  24,   48,   64,   80,      160]
@@ -197,7 +197,6 @@ class HarDNeXt(nn.Module):
             downSamp = [   1,   0,    1,    0,    1,        0]
         
         elif arch == 50:
-            ''' 502  76.32%, 192 FPS'''
             
             first_ch  = [32, 64]
             ch_list  = [  64, 128,  192, 288, 768,  1024]
