@@ -1,9 +1,9 @@
 
 # HarDNeXt-Pytorch
 
-### **[HarDNeXt: A Stage Receptive Field and Connectivity Aware Convolution Neural Network](https://etd.lib.nctu.edu.tw/cgi-bin/gs32/hugsweb.cgi?o=dnthucdr&s=id=%22G021080626010%22.&searchmode=basic)**
+**[HarDNeXt: A Stage Receptive Field and Connectivity Aware Convolution Neural Network](https://etd.lib.nctu.edu.tw/cgi-bin/gs32/hugsweb.cgi?o=dnthucdr&s=id=%22G021080626010%22.&searchmode=basic)**
 
-### **HarDNeXt-MSEG for Medical Image Segmentation in 0.913 mDice / 127 FPS, 0.910 mDice / 150 FPS on Kvasir-SEG dataset**
+**HarDNeXt-MSEG for Medical Image Segmentation in 0.913 mDice / 127 FPS, 0.910 mDice / 150 FPS on Kvasir-SEG dataset**
 
 
 ### Image Classification (ImgaeNet 2012)
@@ -43,6 +43,9 @@
 |   ResNeXt-50    |   4.27   |         166         |   0.92   |      77.62       |
 | **HarDNeXt-56** | **6.32** |       **182**       | **0.89** |     **77.3**     |
 
+---
+### ImageNet Pretrained Weights
+https://drive.google.com/drive/folders/18yJztdtXbRMb3tfunQJNmIdvf-gMY9ad?usp=sharing
 ---
 
 ### Training
